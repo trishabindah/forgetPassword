@@ -19,13 +19,13 @@ export default class App extends React.Component {
               <TextInput
                 style={styles.passwordStyle}
                 onChangeText={(text) => this.setState({ text })}
-                keyboardType="password"
+                keyboardType="email-address"
                 placeholder="Password"
               />
               <TextInput
                 style={styles.confirmPasswordStyle}
                 onChangeText={(text) => this.setState({ text })}
-                keyboardType="confirmPassword"
+                keyboardType="email-address"
                 placeholder="Confirm Password"
               />
               <TouchableHighlight
@@ -46,32 +46,30 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 2,
-    backgroundColor: '#Df3',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 3,
+    backgroundColor: '#FFF',
   },
   redScreen: {
     flex: 1,
     backgroundColor: '#D43939',
     alignItems: 'center',
-    width: '100%'
   },
   whiteScreen: {
-    flex: 2.7,
+    flex: 1,
     width: '100%',
+    backgroundColor: '#FFF'
+  },
+  passwordForm: {
+    flex: 2,
+    backgroundColor: '#FFF',
+    alignItems: 'center'
   },
   choosePassword: {
+    marginTop: 10,
     fontSize: 20,
     fontWeight: 'bold',
     color: '#D43939',
     marginBottom: 30,
-  },
-  passwordForm: {
-    flex: 2.7,
-    backgroundColor: '#FFF',
-    alignItems: 'center',
-    justifyContent: 'center'
   },
   passwordStyle: {
     height: 36,
